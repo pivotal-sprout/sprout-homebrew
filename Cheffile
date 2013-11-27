@@ -6,3 +6,11 @@ cookbook 'sprout-homebrew',
 cookbook 'sprout-osx-apps',
   :git => 'git://github.com/pivotal-sprout/sprout.git',
   :path => 'sprout-osx-apps'
+
+cookbook 'sprout-osx-base',
+  :git => 'git://github.com/pivotal-sprout/sprout.git',
+  :path => 'sprout-osx-base'
+
+cookbook 'sprout-osx-settings',
+  :git => 'git://github.com/pivotal-sprout/sprout.git',
+  :path => 'sprout-osx-settings'
