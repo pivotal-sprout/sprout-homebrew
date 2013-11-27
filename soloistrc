@@ -1,0 +1,10 @@
+recipes:
+  - sprout-homebrew
+
+node_attributes:
+  sprout:
+    homebrew:
+      formulae:
+        - pstree
+      casks:
+      	- chrome

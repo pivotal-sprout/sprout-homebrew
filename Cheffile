@@ -1,0 +1,8 @@
+site 'http://community.opscode.com/api/v1'
+
+cookbook 'sprout-homebrew',
+  :path => '.'
+
+cookbook 'sprout-osx-apps',
+  :git => 'git://github.com/pivotal-sprout/sprout.git',
+  :path => 'sprout-osx-apps'

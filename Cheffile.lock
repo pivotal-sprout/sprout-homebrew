@@ -1,0 +1,18 @@
+GIT
+  remote: git://github.com/pivotal-sprout/sprout.git
+  path: osx
+  ref: master
+  sha: 9221731b3a267300ee9ea505d93790a39ef2c604
+  specs:
+    osx (0.1.0)
+
+PATH
+  remote: .
+  specs:
+    sprout-terminal (0.1.0)
+      osx (>= 0.0.0)
+
+DEPENDENCIES
+  osx (>= 0)
+  sprout-terminal (>= 0)
+
