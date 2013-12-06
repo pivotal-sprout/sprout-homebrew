@@ -1,12 +1,19 @@
-# sprout-homebrew cookbook
+# sprout-homebrew
 
-# Requirements
+A Chef cookbook to install Homebrew [formulae](https://github.com/mxcl/homebrew/tree/master/Library/Formula) for packages and [casks](https://github.com/phinze/homebrew-cask/blob/master/USAGE.md) for applications.
 
-# Usage
+## Development
 
-# Attributes
+### FoodCritic
 
-# Recipes
+```
+bundle
+bundle exec foodcritic
+```
 
-# Author
+### Specs
 
+```
+bundle
+bundle exec rake 
+```
