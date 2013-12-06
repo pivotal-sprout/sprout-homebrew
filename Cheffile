@@ -1,21 +1,4 @@
-
-cookbook 'sprout-homebrew',
-  :path => '.'
-
-cookbook 'sprout-osx-apps',
-  :git => 'git://github.com/pivotal-sprout/sprout.git',
-  :path => 'sprout-osx-apps'
-
-cookbook 'sprout-osx-base',
-  :git => 'git://github.com/pivotal-sprout/sprout.git',
-  :path => 'sprout-osx-base'
-
-cookbook 'sprout-osx-settings',
-  :git => 'git://github.com/pivotal-sprout/sprout.git',
-  :path => 'sprout-osx-settings'
-
-cookbook 'homebrew',
-  :git => 'git://github.com/cunnie/homebrew.git',
-  :path => '.'
-
 site 'http://community.opscode.com/api/v1'
+
+cookbook 'sprout-homebrew', path: '.'
+cookbook 'homebrew',        git: 'git://github.com/cunnie/homebrew.git'
