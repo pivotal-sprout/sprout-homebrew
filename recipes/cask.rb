@@ -2,7 +2,7 @@ include_recipe "homebrew"
 
 execute "tap phinze/homebrew-cask" do
   command "brew tap phinze/homebrew-cask"
-  not_if { system("brew tap | grep 'cask' > /dev/null 2>&1") }
+  not_if "brew tap | grep 'cask' > /dev/null 2>&1"
 end
 
 package "brew-cask"
