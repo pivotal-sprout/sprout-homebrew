@@ -17,5 +17,5 @@ bundle exec foodcritic
 
 ```
 bundle
-bundle exec rake 
+bundle exec rspec 
 ```
