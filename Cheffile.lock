@@ -1,9 +1,7 @@
-GIT
-  remote: git://github.com/cunnie/homebrew.git
-  ref: master
-  sha: 5dcf5572e7899d5302f5a11f52ccb05d4cc44e72
+SITE
+  remote: http://community.opscode.com/api/v1
   specs:
-    homebrew (1.5.3)
+    homebrew (1.5.4)
 
 PATH
   remote: .
@@ -12,6 +10,5 @@ PATH
       homebrew (>= 0.0.0)
 
 DEPENDENCIES
-  homebrew (>= 0)
   sprout-homebrew (>= 0)
 
