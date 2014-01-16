@@ -18,3 +18,8 @@ end
 directory '/opt/homebrew-cask' do
   owner node['current_user']
 end
+
+execute 'update cask' do
+  user node['current_user']
+  command '/usr/local/bin/brew upgrade brew-cask || true'
+end
