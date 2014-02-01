@@ -7,7 +7,7 @@ end
 
 execute "tap caskroom/versions" do
   command "brew tap caskroom/versions"
-  not_if "brew tap | grep 'cask' > /dev/null 2>&1"
+  not_if "brew tap | grep 'versions' > /dev/null 2>&1"
 end
 
 package "brew-cask"
