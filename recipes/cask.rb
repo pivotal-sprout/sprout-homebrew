@@ -5,6 +5,11 @@ execute "tap phinze/homebrew-cask" do
   not_if "brew tap | grep 'cask' > /dev/null 2>&1"
 end
 
+execute "tap caskroom/versions" do
+  command "brew tap caskroom/versions"
+  not_if "brew tap | grep 'cask' > /dev/null 2>&1"
+end
+
 package "brew-cask"
 
 directory '/opt/homebrew-cask/Caskroom' do
