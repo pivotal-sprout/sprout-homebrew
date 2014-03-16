@@ -33,7 +33,7 @@ node["sprout"]["homebrew"]["launchctl"].each do |package, subcommand|
       only_if "test -L #{File.join(launch_agents_path, plist)}"
     end
 
-    link "#{File.join(launch_agents_path, plist)}" do
+    link File.join(launch_agents_path, plist) do
       action :delete
       only_if "test -L #{File.join(launch_agents_path, plist)}"
     end
