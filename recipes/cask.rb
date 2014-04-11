@@ -1,11 +1,15 @@
-include_recipe "homebrew"
+include_recipe 'homebrew'
 
-execute "tap phinze/homebrew-cask" do
-  command "brew tap phinze/homebrew-cask"
-  not_if "brew tap | grep 'cask' > /dev/null 2>&1"
+execute 'tap cask' do
+  command 'brew tap "phinze/cask"'
+  user node['current_user']
 end
 
-package "brew-cask"
+package 'brew-cask'
+
+package 'brew-cask' do
+  action :upgrade
+end
 
 directory '/opt/homebrew-cask/Caskroom' do
   action :create
@@ -17,9 +21,4 @@ end
 
 directory '/opt/homebrew-cask' do
   owner node['current_user']
-end
-
-execute 'update cask' do
-  user node['current_user']
-  command '/usr/local/bin/brew upgrade brew-cask || true'
 end
