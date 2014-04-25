@@ -3,3 +3,4 @@ cookbooks/
 .idea/
 .vagrant
 .bundle
+Cheffile.lock
