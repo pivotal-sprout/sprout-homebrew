@@ -14,6 +14,7 @@ package 'brew-cask'
 
 package 'brew-cask' do
   action :upgrade
+  ignore_failure true
 end
 
 directory '/opt/homebrew-cask/Caskroom' do
