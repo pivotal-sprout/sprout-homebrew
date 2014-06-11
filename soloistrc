@@ -4,7 +4,9 @@ recipes:
 node_attributes:
   sprout:
     homebrew:
-      formulae:
-        - pstree
       casks:
         - google-chrome
+      formulae:
+        - tor
+      launchctl:
+        tor: load
