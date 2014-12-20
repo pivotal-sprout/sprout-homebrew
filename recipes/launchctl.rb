@@ -3,7 +3,7 @@ launch_agents_path = File.expand_path("~/Library/LaunchAgents")
 directory launch_agents_path do
   action :create
   recursive true
-  owner node["current_user"]
+  owner node['sprout']['user']
 end
 
 
@@ -17,19 +17,19 @@ node["sprout"]["homebrew"]["launchctl"].each do |package, subcommand|
 
     execute "start at login" do
       command "ln -sfv #{File.join(installation_path, plist)} #{launch_agents_path}"
-      user node["current_user"]
+      user node['sprout']['user']
     end
 
     execute "start now" do
       command "launchctl load -w #{File.join(launch_agents_path, plist)}"
-      user node["current_user"]
+      user node['sprout']['user']
     end
 
   when "unload"
 
     execute "stop" do
       command "launchctl unload -w #{File.join(launch_agents_path, plist)}"
-      user node["current_user"]
+      user node['sprout']['user']
       only_if "test -L #{File.join(launch_agents_path, plist)}"
     end
 
@@ -42,12 +42,12 @@ node["sprout"]["homebrew"]["launchctl"].each do |package, subcommand|
 
     execute "stop now" do
       command "launchctl unload -w #{File.join(launch_agents_path, plist)}"
-      user node["current_user"]
+      user node['sprout']['user']
     end
 
     execute "start now" do
       command "launchctl load -w #{File.join(launch_agents_path, plist)}"
-      user node["current_user"]
+      user node['sprout']['user']
     end
 
   end
