@@ -6,7 +6,7 @@ directory '/usr/local/Library/Taps' do
 end
 
 execute 'tap cask' do
-  command 'brew tap "phinze/cask"'
+  command 'brew tap "caskroom/homebrew-cask"'
   user node['sprout']['user']
 end
 
