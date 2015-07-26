@@ -14,7 +14,9 @@ describe 'sprout-homebrew' do
   end
 
   it 'installs the preview version of hub as an example formula' do
-    expect(`hub --version`).to match(/preview/)
+    semver = '\d+\.\d+\.\d+'
+    sha = '[a-f0-9]{7}'
+    expect(`hub --version`).to match(/#{semver}-g#{sha}/)
   end
 
   it 'loads the tor agent as an example daemon' do
