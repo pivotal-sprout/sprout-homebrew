@@ -1,1 +1,1 @@
-node.default['sprout']['homebrew']['casks']=[]
+node.default['sprout']['homebrew']['casks'] = []

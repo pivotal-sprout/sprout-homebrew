@@ -1,1 +1,1 @@
-node.default['sprout']['homebrew']['formulae']=[]
+node.default['sprout']['homebrew']['formulae'] = []

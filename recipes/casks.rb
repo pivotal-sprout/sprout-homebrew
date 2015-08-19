@@ -3,6 +3,6 @@
 include_recipe 'homebrew'
 
 node['sprout']['homebrew']['casks'].each do |cask|
-  Chef::Log::warn("Doing cask #{cask}")
+  Chef::Log.warn("Doing cask #{cask}")
   sprout_homebrew_cask cask
 end
