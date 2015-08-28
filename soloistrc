@@ -2,8 +2,6 @@ recipes:
   - sprout-homebrew
 
 node_attributes:
-  homebrew:
-    auto-update: true
   sprout:
     homebrew:
       casks:
