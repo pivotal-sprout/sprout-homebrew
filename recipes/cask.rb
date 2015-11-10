@@ -6,7 +6,8 @@ directory '/usr/local/Library/Taps' do
 end
 
 execute 'tap cask' do
-  command 'brew tap "caskroom/homebrew-cask"'
+  command 'brew tap "caskroom/cask"'
+  not_if '/usr/local/bin/brew tap | grep caskroom/cask'
   user node['sprout']['user']
 end
 
