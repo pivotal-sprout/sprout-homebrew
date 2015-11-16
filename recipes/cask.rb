@@ -5,10 +5,7 @@ directory '/usr/local/Library/Taps' do
   recursive true
 end
 
-execute 'tap cask' do
-  command 'brew tap "caskroom/homebrew-cask"'
-  user node['sprout']['user']
-end
+homebrew_tap 'caskroom/cask'
 
 package 'caskroom/cask/brew-cask'
 
