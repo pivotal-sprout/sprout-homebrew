@@ -16,3 +16,8 @@ end
 directory '/opt/homebrew-cask' do
   owner node['sprout']['user']
 end
+
+directory '/Library/Caches/Homebrew/Casks' do
+  owner node['sprout']['user']
+  group 'staff'
+end
