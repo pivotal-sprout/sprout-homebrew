@@ -5,15 +5,6 @@ directory '/usr/local/Library/Taps' do
   recursive true
 end
 
-homebrew_tap 'caskroom/cask'
-
-package 'caskroom/cask/brew-cask'
-
-package 'caskroom/cask/brew-cask' do
-  action :upgrade
-  ignore_failure true
-end
-
 directory '/opt/homebrew-cask/Caskroom' do
   action :create
   recursive true
