@@ -1,14 +1,8 @@
 recipes:
-  - sprout-homebrew
+  - sprout-homebrew::launchctl
 
 node_attributes:
   sprout:
     homebrew:
-      casks:
-        - google-chrome
-      formulae:
-        - tor
-        - name: hub
-          head: true
       launchctl:
-        tor: load
+        tor: unload

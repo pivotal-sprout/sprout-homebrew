@@ -2,7 +2,16 @@
 
 [![Build Status](https://travis-ci.org/pivotal-sprout/sprout-homebrew.png?branch=master)](https://travis-ci.org/pivotal-sprout/sprout-homebrew)
 
-A Chef cookbook to install Homebrew [formulae](https://github.com/mxcl/homebrew/tree/master/Library/Formula) for packages and [casks](https://github.com/caskroom/homebrew-cask/blob/master/USAGE.md) for applications.
+A Chef cookbook to manage automatic startup of homebrew [formulas](https://github.com/mxcl/homebrew/tree/master/Library/Formula).
+
+## Deprecation Notice
+
+sprout-homebrew is mostly deprecated in favor of Chef's default [homebrew cookbook](https://github.com/chef-cookbooks/homebrew), and is only useful for managing package automatic startup with launchctl. If you need to install homebrew, formulas, or casks, please use that cookbook instead. If needed, [sprout-homebrew 0.3.0](https://github.com/pivotal-sprout/sprout-homebrew/commit/68274f5f450a1cf1b0ae6748e4c4606d1ce47e87) is available, but keep in mind that it may not work as expected.
+
+To migrate from sprout-homebrew to homebrew, you can do the following:
+
+- sprout-homebrew::formulae &mdash; Use homebrew::install_formulas and move `node_attributes.sprout.homebrew.formulae` to `node_attributes.homebrew.formulas`.
+- sprout-homebrew::casks &mdash; Use homebrew::install_casks and move `node_attributes.sprout.homebrew.casks` to `node_attributes.homebrew.casks`.
 
 ## Usage
 
@@ -22,14 +31,8 @@ bundle exec soloist
 
 ### Attributes
 
-
 *NOTE:* All preferences are namespaced under `sprout => homebrew` they include:
 
-* `formulae` &mdash; The list of brew packages to install
-  - To install the formula at the HEAD revision (rather than stable), use a hash with the following keys:
-    - `name` &mdash; The name of the package
-    - `head` &mdash; Set to `true`
-* `casks` &mdash; The list of casks to install
 * `launchctl` &mdash; The list of packages to automatically start (managed by
    launchctl). Each package is a key value e.g. `tor: load` where the value is
    one of:
@@ -39,10 +42,6 @@ bundle exec soloist
 
 ### Recipes
 
-1. `sprout-homebrew`
-1. `sprout-homebrew::formulae`
-1. `sprout-homebrew::casks`
-1. `sprout-homebrew::casks`
 1. `sprout-homebrew::launchctl`
 
 ## Contributing
