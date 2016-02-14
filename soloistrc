@@ -5,4 +5,4 @@ node_attributes:
   sprout:
     homebrew:
       launchctl:
-        tor: unload
+        tor: load
