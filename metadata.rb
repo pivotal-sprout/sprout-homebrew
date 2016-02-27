@@ -1,6 +1,8 @@
 name             'sprout-homebrew'
 maintainer       'Pivotal'
 maintainer_email 'sprout-maintainers@googlegroups.com'
+source_url       'https://github.com/pivotal-sprout/sprout-homebrew'
+issues_url       'https://github.com/pivotal-sprout/sprout-homebrew/issues'
 license          'MIT'
 description      'Manages automatic start of homebrew formulas'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
